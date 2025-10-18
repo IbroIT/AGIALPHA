@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Импортируем PNG иконки флагов
@@ -24,6 +24,18 @@ const LanguageSwitcher = () => {
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
+  // Закрытие меню при клике вне компонента
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.language-switcher')) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const handleLanguageChange = (languageCode) => {
     i18n.changeLanguage(languageCode);
     setIsOpen(false);
@@ -47,11 +59,11 @@ const LanguageSwitcher = () => {
   );
 
   return (
-    <div className="relative">
+    <div className="relative language-switcher">
       {/* Кнопка переключателя */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/5 transition-all duration-300 border border-white/20"
+        className="flex items-center space-x-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/5 transition-all duration-300 border border-white/20 min-w-[60px] sm:min-w-auto"
         aria-label="Switch language"
       >
         <FlagImage code={currentLanguage.flag} />
@@ -90,14 +102,6 @@ const LanguageSwitcher = () => {
           ))}
         </div>
       )}
-
-      {/* Overlay для закрытия при клике вне компонента */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 z-40" 
-          onClick={() => setIsOpen(false)}
-        />
-      )}
     </div>
   );
 };
@@ -126,7 +130,7 @@ const MobileLanguageSwitcher = ({ onClose }) => {
     if (onClose) onClose();
   };
 
-  const FlagImage = ({ code, className = "w-5 h-5" }) => (
+  const FlagImage = ({ code, className = "w-6 h-6" }) => (
     <img 
       src={flagImages[code]} 
       alt="" 
@@ -136,22 +140,22 @@ const MobileLanguageSwitcher = ({ onClose }) => {
 
   return (
     <div className="border-t border-white/10 pt-4">
-      <div className="px-4 space-y-2">
-        <div className="text-blue-200 text-sm font-medium mb-2">Language / Язык / اللغة</div>
+      <div className="px-2 space-y-2">
+        <div className="text-blue-200 text-sm font-medium mb-2 px-2">Language / Язык / اللغة</div>
         {languages.map((language) => (
           <button
             key={language.code}
             onClick={() => handleLanguageChange(language.code)}
-            className={`flex items-center space-x-3 w-full px-4 py-3 rounded-xl text-left transition-all duration-200 ${
+            className={`flex items-center space-x-3 w-full px-3 py-3 rounded-xl text-left transition-all duration-200 ${
               i18n.language === language.code
                 ? 'bg-blue-600 text-white'
                 : 'text-white/90 hover:text-white hover:bg-white/5'
             }`}
           >
-            <FlagImage code={language.flag} />
-            <span className="font-medium">{language.name}</span>
+            <FlagImage code={language.flag} className="w-6 h-6" />
+            <span className="font-medium text-base">{language.name}</span>
             {i18n.language === language.code && (
-              <svg className="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 ml-auto" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             )}
