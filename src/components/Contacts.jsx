@@ -110,6 +110,15 @@ const Contacts = () => {
     }
   };
 
+  // Новая функция для открытия почтовой программы
+  const openEmailClient = (email, type) => {
+    const subject = encodeURIComponent(`Inquiry - ${type}`);
+    const body = encodeURIComponent('Hello AGI Alpha Team,\n\nI would like to get in touch with you regarding...');
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+    
+    window.open(mailtoLink, '_self');
+  };
+
   const contactMethods = [
     {
       type: 'General Inquiries',
@@ -193,17 +202,26 @@ const Contacts = () => {
                   {method.description}
                 </p>
 
-                <div className="relative">
+                <div className="space-y-3">
+                  {/* Кнопка для копирования */}
                   <button
                     onClick={() => copyToClipboard(method.email, method.type)}
-                    className="group/email w-full bg-white/5 border border-white/20 hover:border-cyan-400/50 rounded-xl p-4 transition-all duration-300"
+                    className="group/email w-full bg-white/5 border border-white/20 hover:border-cyan-400/50 rounded-xl p-3 transition-all duration-300"
                   >
-                    <div className="text-cyan-400 font-mono text-lg group-hover/email:text-cyan-300 transition-colors duration-300">
+                    <div className="text-cyan-400 font-mono text-sm group-hover/email:text-cyan-300 transition-colors duration-300">
                       {method.email}
                     </div>
-                    <div className="text-blue-200 text-sm mt-1">
+                    <div className="text-blue-200 text-xs mt-1">
                       {copiedEmail === method.type ? '✓ Copied!' : 'Click to copy'}
                     </div>
+                  </button>
+                  
+                  {/* Новая кнопка для открытия почтовой программы */}
+                  <button
+                    onClick={() => openEmailClient(method.email, method.type)}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    ✉️ Send Email
                   </button>
                   
                   {copiedEmail === method.type && (

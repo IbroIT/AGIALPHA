@@ -165,7 +165,7 @@ const WhoWeAre = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Who We <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Are</span>
+            About <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">us</span>
           </h1>
           
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto mb-8 rounded-full" />
@@ -190,7 +190,7 @@ const WhoWeAre = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
                     <span className="text-white text-lg font-bold">🎯</span>
                   </div>
-                  <h2 className="text-3xl font-bold text-white">Our Mission</h2>
+                  <h2 className="text-3xl font-bold text-white">Our Strategy</h2>
                 </div>
                 
                 <p className="text-lg text-blue-100 leading-relaxed">

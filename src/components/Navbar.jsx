@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import Logo from '../assets/logo.jpg';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +37,7 @@ const Navbar = () => {
 
   // Меню
   const menuItems = [
-    { key: 'who-we-are', label: 'Who We Are', section: 'who-we-are' },
+    { key: 'who-we-are', label: 'About us', section: 'who-we-are' },
     { key: 'what-we-build', label: 'What We Build', section: 'what-we-build' },
     { key: 'contact', label: 'Contact', section: 'contact' },
   ];
@@ -115,9 +115,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Логотип */}
           <button onClick={() => smoothScrollTo('hero')} className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center font-bold text-white text-lg shadow-lg">
-              AGI
-            </div>
+            <img src={Logo} alt="Logo" className="w-10 h-10 rounded-md object-cover" />
             <div className="flex flex-col">
               <span className="text-white text-lg font-semibold leading-tight">AGI ALPHA</span>
               <span className="text-slate-300 text-xs font-medium">ANALYTICS CORP</span>

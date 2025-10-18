@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from '../assets/logo.jpg';
 
 const Footer = () => {
   const [activeLegal, setActiveLegal] = useState(null);
@@ -23,9 +24,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center font-bold text-white text-lg shadow-lg">
-              AI
-            </div>
+            <img src={Logo} alt="Logo" className="w-10 h-10 rounded-md object-cover" />
             <div className="text-left">
               <span className="text-white text-lg font-semibold">AGI ALPHA</span>
               <span className="block text-slate-300 text-xs font-medium">ANALYTICS CORP</span>

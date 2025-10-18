@@ -367,9 +367,9 @@ const WhatWeBuild = () => {
                 <span className="relative z-10">Request Demo</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10" />
               </button>
-              <button className="group relative border-2 border-blue-400/50 hover:border-cyan-400 text-blue-100 hover:text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-cyan-500/10">
+              {/* <button className="group relative border-2 border-blue-400/50 hover:border-cyan-400 text-blue-100 hover:text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-cyan-500/10">
                 <span>View Documentation</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
