@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Contacts = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [copiedEmail, setCopiedEmail] = useState('');
@@ -110,10 +112,9 @@ const Contacts = () => {
     }
   };
 
-  // Новая функция для открытия почтовой программы
   const openEmailClient = (email, type) => {
-    const subject = encodeURIComponent(`Inquiry - ${type}`);
-    const body = encodeURIComponent('Hello AGI Alpha Team,\n\nI would like to get in touch with you regarding...');
+    const subject = encodeURIComponent(t('contacts.email.subject', { type }));
+    const body = encodeURIComponent(t('contacts.email.body'));
     const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
     
     window.open(mailtoLink, '_self');
@@ -121,16 +122,16 @@ const Contacts = () => {
 
   const contactMethods = [
     {
-      type: 'General Inquiries',
+      type: t('contacts.methods.general.type'),
       email: 'info@agialpha.pro',
-      description: 'For general questions, partnerships, and business inquiries',
+      description: t('contacts.methods.general.description'),
       icon: '📧',
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
-      type: 'Press & Media',
+      type: t('contacts.methods.press.type'),
       email: 'press@agialpha.pro',
-      description: 'For media relations, press releases, and interview requests',
+      description: t('contacts.methods.press.description'),
       icon: '📰',
       gradient: 'from-purple-500 to-pink-500'
     }
@@ -168,13 +169,15 @@ const Contacts = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Contact</span> Us
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              {t('contacts.title.highlight')}
+            </span> {t('contacts.title.main')}
           </h1>
           
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto mb-8 rounded-full" />
           
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Get in touch with our team for inquiries, partnerships, and media relations
+            {t('contacts.subtitle')}
           </p>
         </div>
 
@@ -203,7 +206,7 @@ const Contacts = () => {
                 </p>
 
                 <div className="space-y-3">
-                  {/* Кнопка для копирования */}
+                  {/* Copy Button */}
                   <button
                     onClick={() => copyToClipboard(method.email, method.type)}
                     className="group/email w-full bg-white/5 border border-white/20 hover:border-cyan-400/50 rounded-xl p-3 transition-all duration-300"
@@ -212,16 +215,16 @@ const Contacts = () => {
                       {method.email}
                     </div>
                     <div className="text-blue-200 text-xs mt-1">
-                      {copiedEmail === method.type ? '✓ Copied!' : 'Click to copy'}
+                      {copiedEmail === method.type ? t('contacts.copied') : t('contacts.clickToCopy')}
                     </div>
                   </button>
                   
-                  {/* Новая кнопка для открытия почтовой программы */}
+                  {/* Email Button */}
                   <button
                     onClick={() => openEmailClient(method.email, method.type)}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
-                    ✉️ Send Email
+                    {t('contacts.sendEmail')}
                   </button>
                   
                   {copiedEmail === method.type && (
@@ -240,11 +243,13 @@ const Contacts = () => {
           <div className="text-center">
             <div className="flex items-center justify-center space-x-4 mb-4">
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-green-400 font-semibold text-lg">Quick Response Time</span>
+              <span className="text-green-400 font-semibold text-lg">
+                {t('contacts.responseTime.title')}
+              </span>
             </div>
             
             <p className="text-blue-100 text-lg">
-              We typically respond to all inquiries within <span className="text-cyan-300 font-semibold">24 hours</span> during business days
+              {t('contacts.responseTime.description')}
             </p>
             
             <div className="w-32 h-1 bg-gradient-to-r from-green-400 to-cyan-400 rounded-full mx-auto mt-4" />

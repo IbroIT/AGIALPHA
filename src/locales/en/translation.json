@@ -1,0 +1,311 @@
+{
+    "navbar": {
+    "brand": {
+      "name": "AGI ALPHA",
+      "subtitle": "ANALYTICS CORP"
+    },
+    "menu": {
+      "about": "About us",
+      "whatWeBuild": "What We Build",
+      "contact": "Contact"
+    },
+    "cta": {
+      "getStarted": "Get Started"
+    },
+    "contact": {
+      "infoEmail": "info@agialpha.pro",
+      "pressEmail": "press@agialpha.pro"
+    },
+    "aria": {
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
+    }
+  },
+  "hero": {
+    "words": ["Artificial Intelligence", "Machine Learning", "Behavioral Models", "Market Data"],
+    "title": {
+      "firstLine": "Turning",
+      "thirdLine": "into Alpha."
+    },
+    "description": "AGI ALPHA ANALYTICS CORP combines advanced artificial intelligence, behavioral models, and market data to generate actionable insights and alpha opportunities for investors, funds, and analytical systems.",
+    "stats": {
+      "years": {
+        "value": "10+",
+        "label": "Years Experience"
+      },
+      "framework": {
+        "value": "AI-Driven",
+        "label": "Analytics Framework"
+      },
+      "focus": {
+        "value": "Alpha",
+        "label": "Generation Focus"
+      }
+    }
+  },
+    "whoWeAre": {
+    "title": {
+      "main": "About",
+      "highlight": "us"
+    },
+    "description": "We are a research and analytics company operating at the intersection of artificial intelligence and financial markets.",
+    "strategy": {
+      "title": "Our Strategy",
+      "description": "To apply AGI-based analytical frameworks to forecast market dynamics, liquidity flows, and option behavior through advanced artificial intelligence systems."
+    },
+    "capabilities": {
+      "title": {
+        "main": "Key",
+        "highlight": "Capabilities"
+      },
+      "subtitle": "Leveraging cutting-edge technology and deep market expertise to deliver actionable insights",
+      "experience": {
+        "title": "10+ years",
+        "description": "of professional market experience"
+      },
+      "ai": {
+        "title": "Proprietary AI",
+        "description": "analytics infrastructure"
+      },
+      "modeling": {
+        "title": "Advanced Modeling",
+        "description": "Probability, GEX, Vega, and Monte-Carlo modeling"
+      },
+      "partnerships": {
+        "title": "Strategic Partnerships",
+        "description": "with brokers and fintech data providers"
+      }
+    },
+    "metrics": {
+      "research": "AI Research",
+      "analysis": "Market Analysis",
+      "dataScience": "Data Science",
+      "riskModeling": "Risk Modeling"
+    },
+    "technology": {
+      "title": "Advanced Analytics Framework",
+      "subtitle": "Our proprietary infrastructure combines multiple analytical approaches",
+      "technologies": {
+        "probability": "Probability Modeling",
+        "gex": "GEX Analysis",
+        "vega": "Vega Modeling",
+        "monteCarlo": "Monte-Carlo Simulation",
+        "liquidity": "Liquidity Flow Analysis",
+        "risk": "Risk Assessment"
+      }
+    },
+    "technologies": {
+  "title": "Advanced Analytical Framework",
+  "subtitle": "Our proprietary infrastructure integrates multiple analytical approaches",
+  "probability": "Probabilistic Modeling",
+  "gex": "GEX Analysis",
+  "vega": "Vega Modeling",
+  "monteCarlo": "Monte Carlo Simulation",
+  "liquidity": "Liquidity Flow Analysis",
+  "risk": "Risk Assessment"
+}
+
+  },
+  "whatWeBuild": {
+    "title": {
+      "main": "What We",
+      "highlight": "Build"
+    },
+    "subtitle": "Advanced AI-powered solutions for modern financial markets",
+    "products": {
+      "aiTrading": {
+        "name": "AI Trading Intelligence",
+        "description": "Forecasting models based on neural networks, statistical, and quantitative methods.",
+        "features": {
+          "neuralNetworks": "Neural Networks",
+          "statisticalModels": "Statistical Models",
+          "quantitativeMethods": "Quantitative Methods"
+        }
+      },
+      "gexAnalytics": {
+        "name": "GEX Analytics",
+        "description": "Dealer positioning, volatility buckets, and market gamma exposure visualization.",
+        "features": {
+          "dealerPositioning": "Dealer Positioning",
+          "volatilityBuckets": "Volatility Buckets",
+          "gammaExposure": "Gamma Exposure"
+        }
+      },
+      "institutionalDashboard": {
+        "name": "Institutional Dashboard",
+        "description": "Multi-factor platform for risk assessment and alpha discovery.",
+        "features": {
+          "riskAssessment": "Risk Assessment",
+          "alphaDiscovery": "Alpha Discovery",
+          "multiFactorAnalysis": "Multi-factor Analysis"
+        }
+      },
+      "macroAIScanner": {
+        "name": "Macro AI Scanner",
+        "description": "AI-driven analysis of macroeconomic data, news sentiment, and market tone.",
+        "features": {
+          "macroData": "Macro Data",
+          "newsSentiment": "News Sentiment",
+          "marketTone": "Market Tone"
+        }
+      }
+    },
+    "professionalSection": {
+      "title": {
+        "main": "Built for",
+        "highlight": "Professionals"
+      }
+    },
+    "professionalFeatures": {
+      "institutionalData": {
+        "title": "Institutional-Grade Data",
+        "description": "Powered by institutional-grade market data"
+      },
+      "deepIntegration": {
+        "title": "Deep Integration",
+        "description": "Deep integration with liquidity and volatility models"
+      },
+      "provenAccuracy": {
+        "title": "Proven Accuracy",
+        "description": "Proven accuracy and transparency in forecasts"
+      }
+    },
+    "dataFlow": {
+      "marketData": "Market Data",
+      "realTime": "Real-time",
+      "aiProcessing": "AI Processing",
+      "analyzing": "Analyzing",
+      "insights": "Insights",
+      "actionable": "Actionable"
+    },
+    "stats": {
+      "uptime": "Uptime",
+      "latency": "Latency",
+      "monitoring": "Monitoring"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Analytics?",
+      "subtitle": "Join leading institutions using our AI-powered solutions",
+      "demoButton": "Request Demo"
+    }
+  },
+   "footer": {
+    "logoAlt": "Logo",
+    "companyName": {
+      "line1": "AGI ALPHA",
+      "line2": "ANALYTICS CORP"
+    },
+    "legalPages": [
+      { "key": "privacy", "label": "Privacy Policy" },
+      { "key": "terms", "label": "Terms of Use" },
+      { "key": "disclaimers", "label": "Disclaimers" }
+    ],
+    "copyright": "© {{year}} AGI ALPHA ANALYTICS CORP. All Rights Reserved.",
+    "disclaimer": {
+      "notRegistered": "AGI ALPHA ANALYTICS CORP is not a registered investment adviser, broker-dealer, or financial institution.",
+      "educationalPurpose": "All materials are provided strictly for educational, informational, and illustrative purposes only.",
+      "noOffer": "Nothing on this website constitutes an offer to sell or a solicitation to buy any security or financial instrument.",
+      "confidentialOffering": "An offering, if any, can be made only through a confidential offering memorandum delivered to qualified investors.",
+      "pastPerformance": "Past performance is not a guarantee of future results.",
+      "investmentRisk": "Investments involve risk, including the possible loss of principal."
+    },
+    "legal": {
+      "privacy": {
+        "title": "Privacy Policy",
+        "content": [
+          "AGI ALPHA ANALYTICS CORP (\"we,\" \"our,\" or \"us\") respects your privacy.",
+          "We collect limited information such as your name, email address, and company affiliation solely for communication and operational purposes.",
+          "We do not sell, rent, or disclose personal data to third parties except as required by law or necessary to deliver our services (e.g., email hosting, analytics, or security).",
+          "All information is stored securely and handled in compliance with applicable data protection regulations, including GDPR and CCPA principles.",
+          "By using this website, you consent to the terms of this Privacy Policy."
+        ]
+      },
+      "terms": {
+        "title": "Terms of Use",
+        "content": [
+          "By accessing or using this website, you agree to comply with these Terms of Use.",
+          "All content, data visualizations, analytics, and intellectual property are owned by AGI ALPHA ANALYTICS CORP and provided for informational and educational purposes only.",
+          "You may not copy, redistribute, or use any material for commercial purposes without prior written consent.",
+          "We reserve the right to modify these Terms at any time, effective upon posting of the updated version on this website.",
+          "Your continued use of the site constitutes acceptance of the revised Terms."
+        ]
+      },
+      "disclaimers": {
+        "title": "Disclaimers",
+        "content": [
+          "AGI ALPHA ANALYTICS CORP is not a registered investment adviser, broker-dealer, or financial institution.",
+          "All analytics, forecasts, and research published on this website are for educational and informational purposes only and do not constitute investment, legal, or financial advice.",
+          "Nothing on this site should be relied upon for trading or investment decisions.",
+          "Users are solely responsible for their financial actions.",
+          "We make no representations or warranties, express or implied, regarding the completeness, accuracy, or timeliness of any information presented herein.",
+          "Past performance is not indicative of future outcomes."
+        ]
+      }
+    },
+    "tagline": "Turning Artificial Intelligence into Alpha"
+  },
+   "contacts": {
+    "title": {
+      "main": "Us",
+      "highlight": "Contact"
+    },
+    "subtitle": "Get in touch with our team for inquiries, partnerships, and media relations",
+    "methods": {
+      "general": {
+        "type": "General Inquiries",
+        "description": "For general questions, partnerships, and business inquiries"
+      },
+      "press": {
+        "type": "Press & Media",
+        "description": "For media relations, press releases, and interview requests"
+      }
+    },
+    "email": {
+      "subject": "Inquiry - {{type}}",
+      "body": "Hello AGI Alpha Team, "
+    },
+    "copied": "✓ Copied!",
+    "clickToCopy": "Click to copy",
+    "sendEmail": "✉️ Send Email",
+    "responseTime": {
+      "title": "Quick Response Time",
+      "description": "We typically respond to all inquiries within 24 hours during business days"
+    }
+  },
+  "legal": {
+    "backButton": "← Back to previous page",
+    "lastUpdated": "Last Updated:",
+    "privacy": {
+      "title": "Privacy Policy",
+      "content": [
+        "AGI ALPHA ANALYTICS CORP (\"we,\" \"our,\" or \"us\") respects your privacy.",
+        "We collect limited information such as your name, email address, and company affiliation solely for communication and operational purposes.",
+        "We do not sell, rent, or disclose personal data to third parties except as required by law or necessary to deliver our services (e.g., email hosting, analytics, or security).",
+        "All information is stored securely and handled in compliance with applicable data protection regulations, including GDPR and CCPA principles.",
+        "By using this website, you consent to the terms of this Privacy Policy."
+      ]
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "content": [
+        "By accessing or using this website, you agree to comply with these Terms of Use.",
+        "All content, data visualizations, analytics, and intellectual property are owned by AGI ALPHA ANALYTICS CORP and provided for informational and educational purposes only.",
+        "You may not copy, redistribute, or use any material for commercial purposes without prior written consent.",
+        "We reserve the right to modify these Terms at any time, effective upon posting of the updated version on this website.",
+        "Your continued use of the site constitutes acceptance of the revised Terms."
+      ]
+    },
+    "disclaimers": {
+      "title": "Disclaimers",
+      "content": [
+        "AGI ALPHA ANALYTICS CORP is not a registered investment adviser, broker-dealer, or financial institution.",
+        "All analytics, forecasts, and research published on this website are for educational and informational purposes only and do not constitute investment, legal, or financial advice.",
+        "Nothing on this site should be relied upon for trading or investment decisions.",
+        "Users are solely responsible for their financial actions.",
+        "We make no representations or warranties, express or implied, regarding the completeness, accuracy, or timeliness of any information presented herein.",
+        "Past performance is not indicative of future outcomes."
+      ],
+      "warning": "Investments involve risk, including the possible loss of principal."
+    }
+  }
+}

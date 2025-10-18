@@ -104,31 +104,48 @@ const WhoWeAre = () => {
     return () => window.removeEventListener('resize', resizeCanvas);
   }, []);
 
+  // Данные из переводов
   const capabilities = [
     {
       icon: '⏳',
-      title: '10+ years',
-      description: 'of professional market experience',
+      title: t('whoWeAre.capabilities.experience.title'),
+      description: t('whoWeAre.capabilities.experience.description'),
       delay: '0.1s'
     },
     {
       icon: '🛠️',
-      title: 'Proprietary AI',
-      description: 'analytics infrastructure',
+      title: t('whoWeAre.capabilities.ai.title'),
+      description: t('whoWeAre.capabilities.ai.description'),
       delay: '0.2s'
     },
     {
       icon: '📈',
-      title: 'Advanced Modeling',
-      description: 'Probability, GEX, Vega, and Monte-Carlo modeling',
+      title: t('whoWeAre.capabilities.modeling.title'),
+      description: t('whoWeAre.capabilities.modeling.description'),
       delay: '0.3s'
     },
     {
       icon: '🤝',
-      title: 'Strategic Partnerships',
-      description: 'with brokers and fintech data providers',
+      title: t('whoWeAre.capabilities.partnerships.title'),
+      description: t('whoWeAre.capabilities.partnerships.description'),
       delay: '0.4s'
     }
+  ];
+
+  const technologies = [
+    { name: t('whoWeAre.technologies.probability'), color: 'from-green-500 to-emerald-500' },
+    { name: t('whoWeAre.technologies.gex'), color: 'from-blue-500 to-cyan-500' },
+    { name: t('whoWeAre.technologies.vega'), color: 'from-purple-500 to-pink-500' },
+    { name: t('whoWeAre.technologies.monteCarlo'), color: 'from-orange-500 to-red-500' },
+    { name: t('whoWeAre.technologies.liquidity'), color: 'from-cyan-500 to-blue-500' },
+    { name: t('whoWeAre.technologies.risk'), color: 'from-indigo-500 to-purple-500' }
+  ];
+
+  const metrics = [
+    { label: t('whoWeAre.metrics.research'), value: '100%' },
+    { label: t('whoWeAre.metrics.analysis'), value: '95%' },
+    { label: t('whoWeAre.metrics.dataScience'), value: '90%' },
+    { label: t('whoWeAre.metrics.riskModeling'), value: '85%' }
   ];
 
   return (
@@ -165,15 +182,13 @@ const WhoWeAre = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            About <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">us</span>
+            {t('whoWeAre.title.main')} <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">{t('whoWeAre.title.highlight')}</span>
           </h1>
           
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto mb-8 rounded-full" />
           
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            We are a <span className="font-semibold text-cyan-300">research and analytics company</span> operating at 
-            the intersection of <span className="font-semibold text-cyan-300">artificial intelligence</span> and 
-            <span className="font-semibold text-cyan-300"> financial markets</span>.
+            {t('whoWeAre.description')}
           </p>
         </div>
 
@@ -190,12 +205,11 @@ const WhoWeAre = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
                     <span className="text-white text-lg font-bold">🎯</span>
                   </div>
-                  <h2 className="text-3xl font-bold text-white">Our Strategy</h2>
+                  <h2 className="text-3xl font-bold text-white">{t('whoWeAre.strategy.title')}</h2>
                 </div>
                 
                 <p className="text-lg text-blue-100 leading-relaxed">
-                  To apply <span className="font-semibold text-cyan-300">AGI-based analytical frameworks</span> to forecast 
-                  market dynamics, liquidity flows, and option behavior through advanced artificial intelligence systems.
+                  {t('whoWeAre.strategy.description')}
                 </p>
               </div>
             </div>
@@ -210,12 +224,7 @@ const WhoWeAre = () => {
               
               <div className="relative backdrop-blur-lg bg-white/10 rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { label: 'AI Research', value: '100%' },
-                    { label: 'Market Analysis', value: '95%' },
-                    { label: 'Data Science', value: '90%' },
-                    { label: 'Risk Modeling', value: '85%' }
-                  ].map((item, index) => (
+                  {metrics.map((item, index) => (
                     <div key={index} className="text-center p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{item.value}</div>
                       <div className="text-sm text-blue-200">{item.label}</div>
@@ -233,10 +242,10 @@ const WhoWeAre = () => {
         }`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Key <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Capabilities</span>
+              {t('whoWeAre.capabilities.title.main')} <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">{t('whoWeAre.capabilities.title.highlight')}</span>
             </h2>
             <p className="text-xl text-blue-200 max-w-2xl mx-auto">
-              Leveraging cutting-edge technology and deep market expertise to deliver actionable insights
+              {t('whoWeAre.capabilities.subtitle')}
             </p>
           </div>
 
@@ -269,21 +278,14 @@ const WhoWeAre = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-white mb-4">Advanced Analytics Framework</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">{t('whoWeAre.technology.title')}</h3>
             <p className="text-blue-200 text-lg">
-              Our proprietary infrastructure combines multiple analytical approaches
+              {t('whoWeAre.technology.subtitle')}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: 'Probability Modeling', color: 'from-green-500 to-emerald-500' },
-              { name: 'GEX Analysis', color: 'from-blue-500 to-cyan-500' },
-              { name: 'Vega Modeling', color: 'from-purple-500 to-pink-500' },
-              { name: 'Monte-Carlo Simulation', color: 'from-orange-500 to-red-500' },
-              { name: 'Liquidity Flow Analysis', color: 'from-cyan-500 to-blue-500' },
-              { name: 'Risk Assessment', color: 'from-indigo-500 to-purple-500' }
-            ].map((tech, index) => (
+            {technologies.map((tech, index) => (
               <div
                 key={index}
                 className="group p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300"

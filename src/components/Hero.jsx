@@ -1,17 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [displayedText, setDisplayedText] = useState('');
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const canvasRef = useRef(null);
 
-  const words = ['Artificial Intelligence', 'Machine Learning', 'Behavioral Models', 'Market Data'];
+  // Получаем слова из переводов
+  const words = t('hero.words', { returnObjects: true });
   const currentWord = words[currentWordIndex];
 
   // Typewriter effect
   useEffect(() => {
+    if (!words.length) return;
+
     const typeSpeed = isDeleting ? 50 : 100;
     const pauseTime = 2000;
 
@@ -33,12 +38,12 @@ const Hero = () => {
     }, typeSpeed);
 
     return () => clearTimeout(timer);
-  }, [displayedText, isDeleting, currentWord]);
+  }, [displayedText, isDeleting, currentWord, words]);
 
   // Mount animation
   useEffect(() => setIsMounted(true), []);
 
-  // Particle background
+  // Particle background (остается без изменений)
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -152,7 +157,7 @@ const Hero = () => {
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-              Turning
+              {t('hero.title.firstLine')}
             </span>
             <br />
             <span className="relative inline-block mt-2">
@@ -163,7 +168,7 @@ const Hero = () => {
             </span>
             <br />
             <span className="bg-gradient-to-r from-blue-200 to-blue-400 bg-clip-text text-transparent">
-              into Alpha.
+              {t('hero.title.thirdLine')}
             </span>
           </h1>
         </div>
@@ -174,9 +179,7 @@ const Hero = () => {
           }`}
         >
           <p className="text-base sm:text-lg md:text-2xl text-blue-100 mb-8 max-w-2xl sm:max-w-4xl mx-auto leading-relaxed px-2">
-            AGI ALPHA ANALYTICS CORP combines advanced artificial intelligence,
-            behavioral models, and market data to generate actionable insights
-            and alpha opportunities for investors, funds, and analytical systems.
+            {t('hero.description')}
           </p>
         </div>
 
@@ -187,16 +190,28 @@ const Hero = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-blue-400/20">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">10+</div>
-              <div className="text-blue-200 text-sm sm:text-base">Years Experience</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                {t('hero.stats.years.value')}
+              </div>
+              <div className="text-blue-200 text-sm sm:text-base">
+                {t('hero.stats.years.label')}
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">AI-Driven</div>
-              <div className="text-blue-200 text-sm sm:text-base">Analytics Framework</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                {t('hero.stats.framework.value')}
+              </div>
+              <div className="text-blue-200 text-sm sm:text-base">
+                {t('hero.stats.framework.label')}
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">Alpha</div>
-              <div className="text-blue-200 text-sm sm:text-base">Generation Focus</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                {t('hero.stats.focus.value')}
+              </div>
+              <div className="text-blue-200 text-sm sm:text-base">
+                {t('hero.stats.focus.label')}
+              </div>
             </div>
           </div>
         </div>

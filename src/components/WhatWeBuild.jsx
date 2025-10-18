@@ -107,31 +107,47 @@ const WhatWeBuild = () => {
 
   const products = [
     {
-      name: 'AI Trading Intelligence',
-      description: 'Forecasting models based on neural networks, statistical, and quantitative methods.',
+      name: t('whatWeBuild.products.aiTrading.name'),
+      description: t('whatWeBuild.products.aiTrading.description'),
       icon: '🧠',
-      features: ['Neural Networks', 'Statistical Models', 'Quantitative Methods'],
+      features: [
+        t('whatWeBuild.products.aiTrading.features.neuralNetworks'),
+        t('whatWeBuild.products.aiTrading.features.statisticalModels'),
+        t('whatWeBuild.products.aiTrading.features.quantitativeMethods')
+      ],
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      name: 'GEX Analytics',
-      description: 'Dealer positioning, volatility buckets, and market gamma exposure visualization.',
+      name: t('whatWeBuild.products.gexAnalytics.name'),
+      description: t('whatWeBuild.products.gexAnalytics.description'),
       icon: '📊',
-      features: ['Dealer Positioning', 'Volatility Buckets', 'Gamma Exposure'],
+      features: [
+        t('whatWeBuild.products.gexAnalytics.features.dealerPositioning'),
+        t('whatWeBuild.products.gexAnalytics.features.volatilityBuckets'),
+        t('whatWeBuild.products.gexAnalytics.features.gammaExposure')
+      ],
       gradient: 'from-cyan-500 to-blue-500'
     },
     {
-      name: 'Institutional Dashboard',
-      description: 'Multi-factor platform for risk assessment and alpha discovery.',
+      name: t('whatWeBuild.products.institutionalDashboard.name'),
+      description: t('whatWeBuild.products.institutionalDashboard.description'),
       icon: '⚡',
-      features: ['Risk Assessment', 'Alpha Discovery', 'Multi-factor Analysis'],
+      features: [
+        t('whatWeBuild.products.institutionalDashboard.features.riskAssessment'),
+        t('whatWeBuild.products.institutionalDashboard.features.alphaDiscovery'),
+        t('whatWeBuild.products.institutionalDashboard.features.multiFactorAnalysis')
+      ],
       gradient: 'from-green-500 to-emerald-500'
     },
     {
-      name: 'Macro AI Scanner',
-      description: 'AI-driven analysis of macroeconomic data, news sentiment, and market tone.',
+      name: t('whatWeBuild.products.macroAIScanner.name'),
+      description: t('whatWeBuild.products.macroAIScanner.description'),
       icon: '🔍',
-      features: ['Macro Data', 'News Sentiment', 'Market Tone'],
+      features: [
+        t('whatWeBuild.products.macroAIScanner.features.macroData'),
+        t('whatWeBuild.products.macroAIScanner.features.newsSentiment'),
+        t('whatWeBuild.products.macroAIScanner.features.marketTone')
+      ],
       gradient: 'from-orange-500 to-red-500'
     }
   ];
@@ -139,18 +155,18 @@ const WhatWeBuild = () => {
   const professionalFeatures = [
     {
       icon: '🏛️',
-      title: 'Institutional-Grade Data',
-      description: 'Powered by institutional-grade market data'
+      title: t('whatWeBuild.professionalFeatures.institutionalData.title'),
+      description: t('whatWeBuild.professionalFeatures.institutionalData.description')
     },
     {
       icon: '🔄',
-      title: 'Deep Integration',
-      description: 'Deep integration with liquidity and volatility models'
+      title: t('whatWeBuild.professionalFeatures.deepIntegration.title'),
+      description: t('whatWeBuild.professionalFeatures.deepIntegration.description')
     },
     {
       icon: '🎯',
-      title: 'Proven Accuracy',
-      description: 'Proven accuracy and transparency in forecasts'
+      title: t('whatWeBuild.professionalFeatures.provenAccuracy.title'),
+      description: t('whatWeBuild.professionalFeatures.provenAccuracy.description')
     }
   ];
 
@@ -188,13 +204,13 @@ const WhatWeBuild = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            What We <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Build</span>
+            {t('whatWeBuild.title.main')} <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">{t('whatWeBuild.title.highlight')}</span>
           </h1>
           
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto mb-8 rounded-full" />
           
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Advanced AI-powered solutions for modern financial markets
+            {t('whatWeBuild.subtitle')}
           </p>
         </div>
 
@@ -261,7 +277,7 @@ const WhatWeBuild = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Built for <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Professionals</span>
+                {t('whatWeBuild.professionalSection.title.main')} <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">{t('whatWeBuild.professionalSection.title.highlight')}</span>
               </h2>
               
               <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full mb-6" />
@@ -300,9 +316,9 @@ const WhatWeBuild = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                    <span className="text-white font-medium">Market Data</span>
+                    <span className="text-white font-medium">{t('whatWeBuild.dataFlow.marketData')}</span>
                   </div>
-                  <div className="text-cyan-400 text-sm">Real-time</div>
+                  <div className="text-cyan-400 text-sm">{t('whatWeBuild.dataFlow.realTime')}</div>
                 </div>
                 
                 <div className="relative">
@@ -313,9 +329,9 @@ const WhatWeBuild = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" />
-                    <span className="text-white font-medium">AI Processing</span>
+                    <span className="text-white font-medium">{t('whatWeBuild.dataFlow.aiProcessing')}</span>
                   </div>
-                  <div className="text-cyan-400 text-sm">Analyzing</div>
+                  <div className="text-cyan-400 text-sm">{t('whatWeBuild.dataFlow.analyzing')}</div>
                 </div>
                 
                 <div className="relative">
@@ -326,9 +342,9 @@ const WhatWeBuild = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
-                    <span className="text-white font-medium">Insights</span>
+                    <span className="text-white font-medium">{t('whatWeBuild.dataFlow.insights')}</span>
                   </div>
-                  <div className="text-cyan-400 text-sm">Actionable</div>
+                  <div className="text-cyan-400 text-sm">{t('whatWeBuild.dataFlow.actionable')}</div>
                 </div>
               </div>
 
@@ -336,15 +352,15 @@ const WhatWeBuild = () => {
               <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/10">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400">99.9%</div>
-                  <div className="text-blue-200 text-sm">Uptime</div>
+                  <div className="text-blue-200 text-sm">{t('whatWeBuild.stats.uptime')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400">50ms</div>
-                  <div className="text-blue-200 text-sm">Latency</div>
+                  <div className="text-blue-200 text-sm">{t('whatWeBuild.stats.latency')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400">24/7</div>
-                  <div className="text-blue-200 text-sm">Monitoring</div>
+                  <div className="text-blue-200 text-sm">{t('whatWeBuild.stats.monitoring')}</div>
                 </div>
               </div>
             </div>
@@ -357,19 +373,16 @@ const WhatWeBuild = () => {
         }`}>
           <div className="backdrop-blur-lg bg-white/10 rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Analytics?
+              {t('whatWeBuild.cta.title')}
             </h3>
             <p className="text-blue-200 text-lg mb-6">
-              Join leading institutions using our AI-powered solutions
+              {t('whatWeBuild.cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="group relative bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105">
-                <span className="relative z-10">Request Demo</span>
+                <span className="relative z-10">{t('whatWeBuild.cta.demoButton')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10" />
               </button>
-              {/* <button className="group relative border-2 border-blue-400/50 hover:border-cyan-400 text-blue-100 hover:text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-cyan-500/10">
-                <span>View Documentation</span>
-              </button> */}
             </div>
           </div>
         </div>
